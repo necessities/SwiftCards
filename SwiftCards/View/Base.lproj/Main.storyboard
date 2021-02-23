@@ -129,9 +129,9 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="3dJ-D5-pOy" firstAttribute="leading" secondItem="gNs-07-9pg" secondAttribute="leading" id="5lV-ek-Nif"/>
+                                                    <constraint firstItem="LeQ-9U-Fe2" firstAttribute="centerX" secondItem="gNs-07-9pg" secondAttribute="centerX" id="6Ab-GV-iGP"/>
                                                     <constraint firstItem="3dJ-D5-pOy" firstAttribute="top" secondItem="gNs-07-9pg" secondAttribute="top" id="EI7-8f-4qh"/>
-                                                    <constraint firstItem="LeQ-9U-Fe2" firstAttribute="centerY" secondItem="gNs-07-9pg" secondAttribute="centerY" id="bnO-9k-KRq"/>
-                                                    <constraint firstItem="LeQ-9U-Fe2" firstAttribute="centerX" secondItem="gNs-07-9pg" secondAttribute="centerX" id="gTA-yZ-bme"/>
+                                                    <constraint firstItem="LeQ-9U-Fe2" firstAttribute="centerY" secondItem="gNs-07-9pg" secondAttribute="centerY" id="Uc9-Bw-bwY"/>
                                                     <constraint firstAttribute="trailing" secondItem="w6U-OB-fkh" secondAttribute="trailing" id="hTN-p4-hPD"/>
                                                     <constraint firstItem="w6U-OB-fkh" firstAttribute="top" secondItem="gNs-07-9pg" secondAttribute="top" id="vzz-PG-rmI"/>
                                                 </constraints>
