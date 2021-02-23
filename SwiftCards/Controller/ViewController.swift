@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     @IBAction func OpyionThree(_ sender: UIButton) {}
     @IBOutlet weak var scoreLabel: UILabel!
     @IBAction func hintButton(_ sender: UIButton) {}
-    @IBOutlet weak var progressBar: UIProgressView!
+
+    
     
     @IBOutlet weak var Option1: UIButton!
     @IBOutlet weak var Option2: UIButton!
@@ -30,14 +31,26 @@ class ViewController: UIViewController {
     
     var quizBrain = QuizBrain()
     
-    
-    
+    @IBOutlet weak var progressBar: UIProgressView!
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
+        
+        Option1.setTitle(quizBrain.getAnswerText1(), for: .normal)
+        Option2.setTitle(quizBrain.getAnswerText2(), for: .normal)
+        Option3.setTitle(quizBrain.getAnswerText3(), for: .normal)
+        
+        
         let userAnswer = sender.currentTitle!
+        let userGotItRight = quizBrain.checkAnswer(userAnswer)
+
+        if userGotItRight {
+            print("Right")
+        } else {
+            print("Wrong")
+        }
         
-        
+        quizBrain.nextQuestion()
         
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
 
@@ -49,10 +62,15 @@ class ViewController: UIViewController {
     @objc func updateUI() {
         
         questionLabel.text = quizBrain.getQuestionText()
+        Option1.setTitle(quizBrain.getAnswerText1(), for: .normal)
+        Option2.setTitle(quizBrain.getAnswerText2(), for: .normal)
+        Option3.setTitle(quizBrain.getAnswerText3(), for: .normal)
         
-        quizBrain.nextQuestion()
         
-           scoreLabel.text = "TEST"
+        scoreLabel.text = "Score: \(quizBrain.getScore())"
+        progressBar.progress = quizBrain.getProgress()
+        print(quizBrain.getProgress())
+        
     }
     
     

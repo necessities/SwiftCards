@@ -12,13 +12,13 @@ import Foundation
 
 struct Question {
     let text: String
-    let answer: Array<Any>
+    let answer: Array<String>
     let correctAnswer: String
     
-    init(q:String, a:Array<Any>, ca: String){
+    init(q:String, a:Array<String>, ca: String){
         text = q
-        answer = []
-        correctAnswer = caCod
+        answer = a
+        correctAnswer = ca
     }
     
     

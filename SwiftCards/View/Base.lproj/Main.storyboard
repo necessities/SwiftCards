@@ -23,9 +23,9 @@
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwA-0H-xAv">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="266"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-Zb-gaM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-Zb-gaM">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="266"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -122,9 +122,6 @@
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-07-9pg">
                                                 <rect key="frame" x="0.0" y="133" width="394" height="133"/>
                                                 <subviews>
-                                                    <progressView opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LeQ-9U-Fe2">
-                                                        <rect key="frame" x="45.883211678827365" y="66" width="300" height="2.5"/>
-                                                    </progressView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dJ-D5-pOy">
                                                         <rect key="frame" x="0.0" y="0.0" width="62.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -141,14 +138,21 @@
                                                             <action selector="hintButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0F-Vj-T0z"/>
                                                         </connections>
                                                     </button>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zzi-gO-RXI">
+                                                        <rect key="frame" x="97" y="61.5" width="200" height="10"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="Ckb-4w-zvO"/>
+                                                            <constraint firstAttribute="height" constant="10" id="OPZ-df-vTz"/>
+                                                        </constraints>
+                                                    </progressView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="3dJ-D5-pOy" firstAttribute="leading" secondItem="gNs-07-9pg" secondAttribute="leading" id="5lV-ek-Nif"/>
-                                                    <constraint firstItem="LeQ-9U-Fe2" firstAttribute="centerX" secondItem="gNs-07-9pg" secondAttribute="centerX" id="6Ab-GV-iGP"/>
                                                     <constraint firstItem="3dJ-D5-pOy" firstAttribute="top" secondItem="gNs-07-9pg" secondAttribute="top" id="EI7-8f-4qh"/>
-                                                    <constraint firstItem="LeQ-9U-Fe2" firstAttribute="centerY" secondItem="gNs-07-9pg" secondAttribute="centerY" id="Uc9-Bw-bwY"/>
+                                                    <constraint firstItem="Zzi-gO-RXI" firstAttribute="centerY" secondItem="gNs-07-9pg" secondAttribute="centerY" id="at4-jE-QFx"/>
                                                     <constraint firstAttribute="trailing" secondItem="w6U-OB-fkh" secondAttribute="trailing" id="hTN-p4-hPD"/>
                                                     <constraint firstItem="w6U-OB-fkh" firstAttribute="top" secondItem="gNs-07-9pg" secondAttribute="top" id="vzz-PG-rmI"/>
+                                                    <constraint firstItem="Zzi-gO-RXI" firstAttribute="centerX" secondItem="gNs-07-9pg" secondAttribute="centerX" id="z9G-Mx-miz"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -169,7 +173,7 @@
                         <outlet property="Option1" destination="JHk-Ev-83D" id="hM8-fi-bYA"/>
                         <outlet property="Option2" destination="kbA-XV-kAO" id="EPf-KQ-DAj"/>
                         <outlet property="Option3" destination="9Jk-1C-EXK" id="dUl-Dd-0Vc"/>
-                        <outlet property="progressBar" destination="LeQ-9U-Fe2" id="ZRm-B9-HRE"/>
+                        <outlet property="progressBar" destination="Zzi-gO-RXI" id="Eb6-4l-M9a"/>
                         <outlet property="questionLabel" destination="Nhw-Zb-gaM" id="Re6-gf-E1h"/>
                         <outlet property="scoreLabel" destination="3dJ-D5-pOy" id="YS8-Ig-A8V"/>
                     </connections>
