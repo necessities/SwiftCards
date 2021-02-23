@@ -6,3 +6,29 @@
 //
 
 import Foundation
+
+
+
+
+struct Question {
+    let text: String
+    let answer: Array<Any>
+    let correctAnswer: String
+    
+    init(q:String, a:Array<Any>, ca: String){
+        text = q
+        answer = []
+        correctAnswer = caCod
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+

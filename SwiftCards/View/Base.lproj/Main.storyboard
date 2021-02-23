@@ -51,6 +51,10 @@
                                                         <state key="normal" title="Option 1">
                                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vT-MC-vcU"/>
+                                                            <action selector="optionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYv-C9-0IY"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -71,6 +75,10 @@
                                                         <state key="normal" title="Option 2">
                                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8u-Kj-tcA"/>
+                                                            <action selector="optionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ab7-w0-gg0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -96,6 +104,10 @@
                                                         <state key="normal" title="Option 3">
                                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="OpyionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWn-yS-nfA"/>
+                                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GxQ-eZ-vRp"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -125,6 +137,9 @@
                                                         <state key="normal" title="Hint">
                                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="hintButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0F-Vj-T0z"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -150,6 +165,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6IG-iD-TQL" secondAttribute="bottom" constant="10" id="h0t-uQ-5C5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Option1" destination="JHk-Ev-83D" id="hM8-fi-bYA"/>
+                        <outlet property="Option2" destination="kbA-XV-kAO" id="EPf-KQ-DAj"/>
+                        <outlet property="Option3" destination="9Jk-1C-EXK" id="dUl-Dd-0Vc"/>
+                        <outlet property="progressBar" destination="LeQ-9U-Fe2" id="ZRm-B9-HRE"/>
+                        <outlet property="questionLabel" destination="Nhw-Zb-gaM" id="Re6-gf-E1h"/>
+                        <outlet property="scoreLabel" destination="3dJ-D5-pOy" id="YS8-Ig-A8V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
