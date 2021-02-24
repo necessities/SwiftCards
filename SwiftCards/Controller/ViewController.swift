@@ -46,13 +46,17 @@ class ViewController: UIViewController {
 
         if userGotItRight {
             print("Right")
+            sender.setTitle("Correct!", for: .normal)
         } else {
             print("Wrong")
+            sender.setTitle("Incorrect", for: .normal)
         }
         
-        quizBrain.nextQuestion()
         
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
+        quizBrain.nextQuestion()
 
     }
     
