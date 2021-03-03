@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jY5-Pq-1za">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,22 +9,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Menu View Controller-->
+        <scene sceneID="FMu-Wr-VWj">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftCards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="jY5-Pq-1za" customClass="MenuViewController" customModule="SwiftCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gmA-zv-CDO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-MF-QfL">
+                                <rect key="frame" x="46" y="355" width="322" height="186"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftCards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueS-I1-v53">
+                                        <rect key="frame" x="78.5" y="0.0" width="165.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" red="0.59057217839999998" green="0.094813950359999996" blue="0.1135136709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y67-T4-ws8">
+                                        <rect key="frame" x="0.0" y="118" width="322" height="68"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Quiz 1" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="initiateQuiz1:" destination="jY5-Pq-1za" eventType="touchUpInside" id="jHf-nY-bZB"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToQuiz1" id="Yqt-kR-dFS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g50-bl-YCF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LDk-MF-QfL" firstAttribute="centerY" secondItem="gmA-zv-CDO" secondAttribute="centerY" id="LNd-fV-DZZ"/>
+                            <constraint firstItem="LDk-MF-QfL" firstAttribute="centerX" secondItem="gmA-zv-CDO" secondAttribute="centerX" id="iYw-6b-RUg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6k-9m-XrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623.1884057971015" y="84.375"/>
+        </scene>
+        <!--Quiz1 View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Quiz1ViewController" customModule="SwiftCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6IG-iD-TQL">
-                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <rect key="frame" x="10" y="10" width="394" height="788"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwA-0H-xAv">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="266"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="262.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-Zb-gaM">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="266"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="262.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <nil key="highlightedColor"/>
@@ -40,13 +81,13 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yim-Cn-46I">
-                                        <rect key="frame" x="0.0" y="266" width="394" height="266"/>
+                                        <rect key="frame" x="0.0" y="262.5" width="394" height="263"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-R6-MCW">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="133"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="131.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHk-Ev-83D">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="133"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="131.5"/>
                                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Option 1">
@@ -68,10 +109,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dw-7j-NfI">
-                                                <rect key="frame" x="0.0" y="133" width="394" height="133"/>
+                                                <rect key="frame" x="0.0" y="131.5" width="394" height="131.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-XV-kAO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="133"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="131.5"/>
                                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                         <state key="normal" title="Option 2">
                                                             <color key="titleColor" systemColor="labelColor"/>
@@ -94,13 +135,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WBf-Oj-GxD">
-                                        <rect key="frame" x="0.0" y="532" width="394" height="266"/>
+                                        <rect key="frame" x="0.0" y="525.5" width="394" height="262.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi7-nL-iky">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="133"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="131"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jk-1C-EXK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="133"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="131"/>
                                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                         <state key="normal" title="Option 3">
                                                             <color key="titleColor" systemColor="labelColor"/>
@@ -121,7 +162,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-07-9pg">
-                                                <rect key="frame" x="0.0" y="133" width="394" height="133"/>
+                                                <rect key="frame" x="0.0" y="131" width="394" height="131.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dJ-D5-pOy">
                                                         <rect key="frame" x="0.0" y="0.0" width="62.5" height="30"/>
@@ -139,7 +180,7 @@
                                                         </connections>
                                                     </button>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zzi-gO-RXI">
-                                                        <rect key="frame" x="97" y="61.5" width="200" height="10"/>
+                                                        <rect key="frame" x="97" y="61" width="200" height="10"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="Ckb-4w-zvO"/>
                                                             <constraint firstAttribute="height" constant="10" id="OPZ-df-vTz"/>
@@ -184,11 +225,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rectangle" width="322" height="68"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
